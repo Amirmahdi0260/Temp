@@ -1,182 +1,264 @@
-🚀 TaskFlow - Task Management System API
+<div align="center">
 
-<p align="center"> A modern Task Management RESTful API built with <b>ASP.NET Core Web API</b> following the <b>Onion Architecture</b> principles. </p>
+# 🚀 XBLogProject
 
-<p align="center">
+### Modern Blog, Project & Task Management System
 
+Built with **ASP.NET Core MVC**, **Web API**, **Entity Framework Core**, and **Onion Architecture**
 
+![.NET](https://img.shields.io/badge/.NET-9-512BD4?style=for-the-badge\&logo=dotnet)
+![C#](https://img.shields.io/badge/C%23-Latest-239120?style=for-the-badge\&logo=c-sharp)
+![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-MVC-5C2D91?style=for-the-badge\&logo=dotnet)
+![EF Core](https://img.shields.io/badge/Entity_Framework_Core-512BD4?style=for-the-badge)
+![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge\&logo=microsoftsqlserver)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
+*A clean, scalable, and production-ready application demonstrating modern ASP.NET Core development practices.*
 
+</div>
 
+---
 
+# 📖 Overview
 
+XBLogProject is a full-stack ASP.NET Core application that combines a blogging platform with project and task management capabilities.
 
-</p>
+The project was developed with a strong focus on **Clean Architecture**, **maintainability**, **performance**, and **security**, following industry-standard software engineering principles.
 
-📖 Overview
+---
 
-TaskFlow is a portfolio project developed with ASP.NET Core Web API using Onion Architecture.
+# ✨ Features
 
-The system is designed to help organizations manage projects and tasks efficiently.
+## 🔐 Authentication & Authorization
 
-Administrators can create projects, assign tasks to registered users, monitor progress, and track project completion. Users can authenticate, view assigned tasks, and update task statuses.
+* Cookie-Based Authentication
+* Secure Login & Logout
+* Role-Based Authorization
+* Access Control
+* Persistent Authentication Cookies
 
-When all tasks belonging to a project are completed, the system automatically marks the project as completed.
+---
 
-This project demonstrates practical experience in ASP.NET Core Web API, Onion Architecture, Entity Framework Core, Repository Pattern, Unit of Work Pattern, Cookie Authentication, and RESTful API design.
+## 👤 User Management
 
-✨ Features
-🔐 Cookie-Based Authentication
-👤 User Registration & Login
-🛡️ Role-Based Authorization
-📁 Project Management
-📋 Task Management
-👥 Task Assignment
-♻️ Soft Delete & Restore
-✅ Automatic Project Completion
-🏗️ Onion Architecture
-💾 SQL Server Database
-⚡ Entity Framework Core
-📄 Swagger Documentation
-🔄 Unit Of Work Pattern
-🧩 Repository Pattern
-🏛️ Architecture
+* User Registration
+* User Login
+* User Profiles
+* Role Management
 
-The project follows the Onion Architecture pattern to achieve maintainability, scalability, and separation of concerns.
+### Dynamic Admin Permission Management
 
-Project Layers
-API
-Controllers
-Middleware
-Authentication Configuration
-Swagger
-Application
-Services
-DTOs
-Contracts
-Business Rules
-Domain
-Entities
-Enums
-Interfaces
-Core Models
-Infrastructure
-Entity Framework Core
-SQL Server
-Repositories
-Unit Of Work
-Data Access Layer
-📊 Business Workflow
-Admin
- │
- ├── Create Project
- │
- ├── Assign Tasks
- │
- └── Manage Users
+An administrator can:
 
-User
- │
- ├── Login
- │
- ├── View Assigned Tasks
- │
- └── Complete Tasks
+* Grant the **Admin** role to another user.
+* Revoke the **Admin** role from existing administrators.
 
-System
- │
- └── Automatically Completes Project
-     When All Tasks Are Completed
-🗄️ Entity Relationships
-User
- │
- └───────< TaskItem >─────── Project
-Relationship Summary
-One User → Many Tasks
-One Project → Many Tasks
-Each Task → One User
-Each Task → One Project
-No Direct Relationship Between User And Project
-📸 API Documentation
+This functionality is fully managed within the application without requiring direct database modifications.
 
-Swagger/OpenAPI is integrated for testing and exploring all endpoints.
+---
 
-Main Endpoints
-Authentication
-POST /api/auth/register
-POST /api/auth/login
-POST /api/auth/logout
-Projects
-GET    /api/projects
-GET    /api/projects/{id}
-POST   /api/projects
-PUT    /api/projects/{id}
-DELETE /api/projects/{id}
-PATCH  /api/projects/{id}/restore
-Tasks
-GET    /api/tasks
-GET    /api/tasks/{id}
-POST   /api/tasks
-PUT    /api/tasks/{id}
-DELETE /api/tasks/{id}
-PATCH  /api/tasks/{id}/restore
-PATCH  /api/tasks/{id}/complete
-🛠️ Technologies
-ASP.NET Core Web API
-C#
-Entity Framework Core
-Microsoft SQL Server
-Cookie Authentication
-Swagger / OpenAPI
-Onion Architecture
-Repository Pattern
-Unit Of Work Pattern
-LINQ
-Dependency Injection
-📂 Project Structure
-TaskFlow
+## 📝 Blog Module
+
+* Create Articles
+* Edit Articles
+* Delete Articles
+* Article Details
+* Comment System
+
+---
+
+## 📁 Project Management
+
+* Create Projects
+* Edit Projects
+* Soft Delete
+* Restore Deleted Projects
+* Project Status Management
+
+### 🤖 Automatic Project Completion
+
+When **all tasks belonging to a project are marked as Completed**, the project is **automatically updated** to the **Completed** status.
+
+This business rule is handled inside the application layer to ensure data consistency.
+
+---
+
+## ✅ Task Management
+
+* Create Tasks
+* Assign Tasks to Users
+* Pending
+* In Progress
+* Completed
+* Rejected
+* Canceled
+* Soft Delete
+* Restore Deleted Tasks
+
+---
+
+# 🏛️ Software Architecture
+
+The project follows the **Onion Architecture**, separating responsibilities into independent layers.
+
+```text
+                 Presentation
+          (MVC + Web API)
+
+                    │
+
+              Application
+
+                    │
+
+                 Domain
+
+                    │
+
+             Infrastructure
+```
+
+## Design Patterns
+
+* Onion Architecture
+* Repository Pattern
+* Unit of Work Pattern
+* Dependency Injection
+* Service Layer Pattern
+
+---
+
+# 🌐 REST API
+
+The solution includes a RESTful Web API that shares the same business logic as the MVC application.
+
+The API is designed for future integration with mobile applications, frontend frameworks, or third-party services.
+
+---
+
+# ⚡ Performance Considerations
+
+The project follows several Entity Framework Core best practices:
+
+* Async database operations
+* AsNoTracking() for read-only queries
+* Optimized LINQ expressions
+* Filtered Include
+* Soft Delete implementation
+* Efficient Change Tracking
+* Reduced unnecessary memory allocations
+* Clean separation between read and write operations
+
+---
+
+# 🛠️ Technologies
+
+| Backend              | Database              | Frontend    | Architecture       |
+| -------------------- | --------------------- | ----------- | ------------------ |
+| ASP.NET Core MVC     | SQL Server            | Bootstrap 5 | Onion Architecture |
+| ASP.NET Core Web API | Entity Framework Core | HTML5       | Repository Pattern |
+| C#                   | LINQ                  | CSS3        | Unit of Work       |
+| Dependency Injection |                       | JavaScript  | Service Layer      |
+
+---
+
+# 📂 Solution Structure
+
+```text
+XBLogProject
+
+├── XBLog.Web
 │
-├── TaskFlow.API
-├── TaskFlow.Infrastructure
-├── TaskFlow.Application
-└── TaskFlow.Domain
-🚀 Getting Started
-Clone Repository
-git clone https://github.com/your-username/TaskFlow.git
-Navigate To Project
-cd TaskFlow
-Configure Database
+├── XBLog.API
+│
+├── XBLog.Application
+│
+├── XBLog.Domain
+│
+└── XBLog.Infrastructure
+```
 
-Update your SQL Server connection string inside:
+---
 
-appsettings.json
-Apply Migrations
+# 🚀 Getting Started
+
+## Clone Repository
+
+```bash
+git clone https://github.com/your-username/XBLogProject.git
+```
+
+## Restore Packages
+
+```bash
+dotnet restore
+```
+
+## Update Database
+
+```bash
 dotnet ef database update
-Run Application
-dotnet run
-💡 Skills Demonstrated
-ASP.NET Core Web API
-Onion Architecture
-Repository Pattern
-Unit Of Work Pattern
-Entity Framework Core
-SQL Server
-Cookie Authentication
-Role-Based Authorization
-RESTful API Design
-Dependency Injection
-Clean Code Principles
-📌 Future Improvements
-JWT Authentication
-Refresh Tokens
-Pagination
-Search & Filtering
-AutoMapper
-CQRS Pattern
-Unit Testing
-Integration Testing
-Docker Support
-Serilog Logging
-📄 License
+```
 
-This project is available under the MIT License.
+## Run Application
+
+```bash
+dotnet run
+```
+
+---
+
+# 📸 Screenshots
+
+> Add screenshots here
+
+* Login
+* Dashboard
+* Blog
+* Projects
+* Tasks
+* Admin Panel
+
+---
+
+# 🎯 What This Project Demonstrates
+
+* ASP.NET Core MVC
+* ASP.NET Core Web API
+* Onion Architecture
+* Repository Pattern
+* Unit of Work
+* Entity Framework Core
+* Cookie Authentication
+* Role-Based Authorization
+* SOLID Principles
+* Clean Code
+* LINQ Optimization
+* Performance-Oriented Data Access
+
+---
+
+# 🚧 Future Improvements
+
+* JWT Authentication
+* Refresh Token Support
+* Docker
+* Unit Testing
+* Integration Testing
+* Email Verification
+* File Upload
+* Real-Time Notifications (SignalR)
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+<div align="center">
+
+### ⭐ If you like this project, don't forget to leave a Star!
+
+</div>
