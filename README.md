@@ -102,31 +102,31 @@ The application exposes a RESTful API that can easily be integrated with:
 
 ## 🏠 Home Page
 
-![Home Page](images/home-page.png)
+<img width="900" height="400" alt="Image" src="https://github.com/user-attachments/assets/07813a61-06fa-43d9-a9aa-45a01dcf8bf0" />
 
 ---
 
 ## 🔐 Login
 
-![Login](images/login.png)
+<img width="900" height="400" alt="Image" src="https://github.com/user-attachments/assets/03b31a82-5dfb-4a03-ba5c-781e4a435959" />
 
 ---
 
 ## 📝 Sign Up
 
-![Sign Up](images/signup.png)
+<img width="900" height="400" alt="Image" src="https://github.com/user-attachments/assets/3a98787f-63f4-4a7c-956d-ab7868309a88" />
 
 ---
 
 ## 📁 Create Project
 
-![Create Project](images/create-project.png)
+<img width="900" height="400" alt="Image" src="https://github.com/user-attachments/assets/8cc4929d-f604-4abc-9037-e04a4973a8e2" />
 
 ---
 
 ## ✅ Complete Task
 
-![Complete Task](images/complete-task.png)
+<img width="900" height="400" alt="Image" src="https://github.com/user-attachments/assets/1fccbbda-2c1f-463c-8d11-cd0f495289e4" />
 
 
 ---
