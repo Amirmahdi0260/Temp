@@ -8,12 +8,11 @@ A modern **Task Management System** built with **.NET 10**, **ASP.NET Core MVC**
 
 Designed with a strong focus on **Clean Architecture**, **Scalability**, **Performance**, and **Maintainability**.
 
-![.NET](https://img.shields.io/badge/.NET-10-512BD4?style=for-the-badge\&logo=dotnet)
-![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-10-5C2D91?style=for-the-badge\&logo=dotnet)
-![C#](https://img.shields.io/badge/C%23-14-239120?style=for-the-badge\&logo=c-sharp)
-![Entity Framework Core](https://img.shields.io/badge/Entity_Framework_Core-10-512BD4?style=for-the-badge)
-![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge\&logo=microsoftsqlserver)
-![License](https://img.shields.io/badge/License-MIT-success?style=for-the-badge)
+![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-MVC-512BD4?style=for-the-badge&logo=.net)
+![C#](https://img.shields.io/badge/C%23-Language-239120?style=for-the-badge&logo=c-sharp)
+![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoftsqlserver)
+![Entity Framework Core](https://img.shields.io/badge/EF_Core-ORM-6DB33F?style=for-the-badge)
+![FluentValidation](https://img.shields.io/badge/FluentValidation-Validation-orange?style=for-the-badge)
 
 </div>
 
