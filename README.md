@@ -98,6 +98,39 @@ The application exposes a RESTful API that can easily be integrated with:
 
 ---
 
+# 📸 Screenshots
+
+## 🏠 Home Page
+
+![Home Page](images/home-page.png)
+
+---
+
+## 🔐 Login
+
+![Login](images/login.png)
+
+---
+
+## 📝 Sign Up
+
+![Sign Up](images/signup.png)
+
+---
+
+## 📁 Create Project
+
+![Create Project](images/create-project.png)
+
+---
+
+## ✅ Complete Task
+
+![Complete Task](images/complete-task.png)
+
+
+---
+
 # 🏛️ Architecture
 
 XTask follows the **Onion Architecture** pattern to achieve clean separation between business logic and infrastructure.
