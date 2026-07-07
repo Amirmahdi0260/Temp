@@ -1,19 +1,19 @@
 <div align="center">
 
-# 🚀 XBLogProject
+# 🚀 XTask
 
-### Modern Blog, Project & Task Management System
+### Modern Task & Project Management System
 
-Built with **ASP.NET Core MVC**, **Web API**, **Entity Framework Core**, and **Onion Architecture**
+A modern **Task Management System** built with **.NET 10**, **ASP.NET Core MVC**, **ASP.NET Core Web API**, and **Onion Architecture**.
 
-![.NET](https://img.shields.io/badge/.NET-10-512BD4?style=for-the-badge&logo=dotnet)
-![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-10-5C2D91?style=for-the-badge&logo=dotnet)
-![C#](https://img.shields.io/badge/C%23-14-239120?style=for-the-badge&logo=c-sharp)
-![EF Core](https://img.shields.io/badge/Entity_Framework_Core-512BD4?style=for-the-badge)
+Designed with a strong focus on **Clean Architecture**, **Scalability**, **Performance**, and **Maintainability**.
+
+![.NET](https://img.shields.io/badge/.NET-10-512BD4?style=for-the-badge\&logo=dotnet)
+![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-10-5C2D91?style=for-the-badge\&logo=dotnet)
+![C#](https://img.shields.io/badge/C%23-14-239120?style=for-the-badge\&logo=c-sharp)
+![Entity Framework Core](https://img.shields.io/badge/Entity_Framework_Core-10-512BD4?style=for-the-badge)
 ![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge\&logo=microsoftsqlserver)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-
-*A clean, scalable, and production-ready application demonstrating modern ASP.NET Core development practices.*
+![License](https://img.shields.io/badge/License-MIT-success?style=for-the-badge)
 
 </div>
 
@@ -21,9 +21,9 @@ Built with **ASP.NET Core MVC**, **Web API**, **Entity Framework Core**, and **O
 
 # 📖 Overview
 
-XBLogProject is a full-stack ASP.NET Core application that combines a blogging platform with project and task management capabilities.
+**XTask** is a modern task and project management application that enables teams to organize projects, assign tasks, track progress, and manage user permissions securely.
 
-The project was developed with a strong focus on **Clean Architecture**, **maintainability**, **performance**, and **security**, following industry-standard software engineering principles.
+The application is built using **Onion Architecture** and follows clean software engineering principles such as **Repository Pattern**, **Unit of Work**, and **Dependency Injection**, ensuring a scalable and maintainable codebase.
 
 ---
 
@@ -34,36 +34,26 @@ The project was developed with a strong focus on **Clean Architecture**, **maint
 * Cookie-Based Authentication
 * Secure Login & Logout
 * Role-Based Authorization
-* Access Control
 * Persistent Authentication Cookies
+* Protected Routes
 
 ---
 
-## 👤 User Management
+## 👥 User Management
 
 * User Registration
 * User Login
-* User Profiles
-* Role Management
+* User Profile Management
+* Dynamic Role Assignment
 
-### Dynamic Admin Permission Management
+### Administrator Permissions
 
-An administrator can:
+Users with the **Admin** role can:
 
-* Grant the **Admin** role to another user.
+* Grant the **Admin** role to other users.
 * Revoke the **Admin** role from existing administrators.
 
-This functionality is fully managed within the application without requiring direct database modifications.
-
----
-
-## 📝 Blog Module
-
-* Create Articles
-* Edit Articles
-* Delete Articles
-* Article Details
-* Comment System
+This permission is fully managed inside the application without requiring direct database changes.
 
 ---
 
@@ -71,15 +61,13 @@ This functionality is fully managed within the application without requiring dir
 
 * Create Projects
 * Edit Projects
-* Soft Delete
+* Delete Projects (Soft Delete)
 * Restore Deleted Projects
 * Project Status Management
 
 ### 🤖 Automatic Project Completion
 
-When **all tasks belonging to a project are marked as Completed**, the project is **automatically updated** to the **Completed** status.
-
-This business rule is handled inside the application layer to ensure data consistency.
+When every task belonging to a project is marked as **Completed**, the project status is automatically updated to **Completed**.
 
 ---
 
@@ -87,6 +75,7 @@ This business rule is handled inside the application layer to ensure data consis
 
 * Create Tasks
 * Assign Tasks to Users
+* Update Task Status
 * Pending
 * In Progress
 * Completed
@@ -97,110 +86,107 @@ This business rule is handled inside the application layer to ensure data consis
 
 ---
 
-# 🏛️ Software Architecture
+## 🌐 Web API
 
-The project follows the **Onion Architecture**, separating responsibilities into independent layers.
+The solution includes a RESTful Web API that shares the same business logic as the MVC application, making future integration with mobile applications or SPA frameworks straightforward.
+
+---
+
+# 🏛️ Architecture
+
+The project follows the **Onion Architecture** to ensure clear separation of concerns.
 
 ```text
-                 Presentation
-          (MVC + Web API)
-
-                    │
-
-              Application
-
-                    │
-
-                 Domain
-
-                    │
-
-             Infrastructure
+Presentation (MVC + Web API)
+            │
+      Application
+            │
+         Domain
+            │
+    Infrastructure
 ```
 
-## Design Patterns
+### Design Patterns
 
 * Onion Architecture
 * Repository Pattern
-* Unit of Work Pattern
+* Unit of Work
 * Dependency Injection
-* Service Layer Pattern
+* Service Layer
 
 ---
 
-# 🌐 REST API
+# ⚡ Performance
 
-The solution includes a RESTful Web API that shares the same business logic as the MVC application.
+The project applies several Entity Framework Core best practices:
 
-The API is designed for future integration with mobile applications, frontend frameworks, or third-party services.
-
----
-
-# ⚡ Performance Considerations
-
-The project follows several Entity Framework Core best practices:
-
-* Async database operations
-* AsNoTracking() for read-only queries
-* Optimized LINQ expressions
-* Filtered Include
+* Asynchronous database operations
+* `AsNoTracking()` for read-only queries
+* Optimized LINQ queries
 * Soft Delete implementation
-* Efficient Change Tracking
+* Efficient Entity Framework Core Change Tracking
+* Filtered Include queries
 * Reduced unnecessary memory allocations
-* Clean separation between read and write operations
 
 ---
 
 # 🛠️ Technologies
 
-| Backend              | Database              | Frontend    | Architecture       |
-| -------------------- | --------------------- | ----------- | ------------------ |
-| ASP.NET Core MVC     | SQL Server            | Bootstrap 5 | Onion Architecture |
-| ASP.NET Core Web API | Entity Framework Core | HTML5       | Repository Pattern |
-| C#                   | LINQ                  | CSS3        | Unit of Work       |
-| Dependency Injection |                       | JavaScript  | Service Layer      |
+| Category       | Technologies                           |
+| -------------- | -------------------------------------- |
+| Framework      | .NET 10                                |
+| Backend        | ASP.NET Core MVC, ASP.NET Core Web API |
+| Language       | C# 14                                  |
+| ORM            | Entity Framework Core 10               |
+| Database       | SQL Server                             |
+| Authentication | Cookie Authentication                  |
+| Architecture   | Onion Architecture                     |
+| Patterns       | Repository Pattern, Unit of Work       |
+| Frontend       | Bootstrap 5, HTML5, CSS3, JavaScript   |
 
 ---
 
 # 📂 Solution Structure
 
 ```text
-XBLogProject
-
-├── XBLog.Web
+XTask
 │
-├── XBLog.API
-│
-├── XBLog.Application
-│
-├── XBLog.Domain
-│
-└── XBLog.Infrastructure
+├── XTask.Web
+├── XTask.Api
+├── XTask.Application
+├── XTask.Domain
+└── XTask.Infrastructure
 ```
 
 ---
 
 # 🚀 Getting Started
 
-## Clone Repository
+## Prerequisites
+
+* .NET 10 SDK
+* SQL Server
+* Visual Studio 2026 or Visual Studio Code
+
+## Clone the repository
 
 ```bash
-git clone https://github.com/your-username/XBLogProject.git
+git clone https://github.com/your-username/XTask.git
 ```
 
-## Restore Packages
+## Restore packages
 
 ```bash
 dotnet restore
 ```
 
-## Update Database
+## Apply database migrations
 
 ```bash
 dotnet ef database update
 ```
 
-## Run Application
+## Run the project
 
 ```bash
 dotnet run
@@ -210,13 +196,13 @@ dotnet run
 
 # 📸 Screenshots
 
-> Add screenshots here
+> Add screenshots of the following pages:
 
 * Login
 * Dashboard
-* Blog
-* Projects
-* Tasks
+* Project List
+* Task List
+* Task Details
 * Admin Panel
 
 ---
@@ -225,29 +211,29 @@ dotnet run
 
 * ASP.NET Core MVC
 * ASP.NET Core Web API
+* .NET 10
 * Onion Architecture
 * Repository Pattern
 * Unit of Work
-* Entity Framework Core
-* Cookie Authentication
+* Cookie-Based Authentication
 * Role-Based Authorization
+* Entity Framework Core
+* LINQ
 * SOLID Principles
 * Clean Code
-* LINQ Optimization
-* Performance-Oriented Data Access
+* High-Performance Data Access
 
 ---
 
-# 🚧 Future Improvements
+# 🚀 Future Improvements
 
+* Email Verification
 * JWT Authentication
-* Refresh Token Support
-* Docker
+* Refresh Tokens
+* Docker Support
+* SignalR Notifications
 * Unit Testing
 * Integration Testing
-* Email Verification
-* File Upload
-* Real-Time Notifications (SignalR)
 
 ---
 
@@ -259,6 +245,6 @@ This project is licensed under the MIT License.
 
 <div align="center">
 
-### ⭐ If you like this project, don't forget to leave a Star!
+### ⭐ If you found this project useful, consider giving it a star!
 
 </div>
