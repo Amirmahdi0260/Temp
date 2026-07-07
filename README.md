@@ -6,9 +6,9 @@
 
 Built with **ASP.NET Core MVC**, **Web API**, **Entity Framework Core**, and **Onion Architecture**
 
-![.NET](https://img.shields.io/badge/.NET-9-512BD4?style=for-the-badge\&logo=dotnet)
-![C#](https://img.shields.io/badge/C%23-Latest-239120?style=for-the-badge\&logo=c-sharp)
-![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-MVC-5C2D91?style=for-the-badge\&logo=dotnet)
+![.NET](https://img.shields.io/badge/.NET-10-512BD4?style=for-the-badge&logo=dotnet)
+![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-10-5C2D91?style=for-the-badge&logo=dotnet)
+![C#](https://img.shields.io/badge/C%23-14-239120?style=for-the-badge&logo=c-sharp)
 ![EF Core](https://img.shields.io/badge/Entity_Framework_Core-512BD4?style=for-the-badge)
 ![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge\&logo=microsoftsqlserver)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
